@@ -40,25 +40,29 @@ class _WelcomeScreenState extends State<WelcomeScreen>
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
-            Row(
-              children: <Widget>[
-                Hero(
-                  tag: 'logo',
-                  child: Container(
-                    child: Image.asset('images/logo.png'),
-                    height: 60.0,
+            Expanded(
+              child: Row(
+                children: <Widget>[
+                  Hero(
+                    tag: 'logo',
+                    child: Container(
+                      child: Image.asset('images/logo.png'),
+                      height: 60.0,
+                    ),
                   ),
-                ),
-                DefaultTextStyle(
-                  style: TextStyle(
-                    fontSize: 45.0,
-                    fontWeight: FontWeight.w900,
-                  ),
-                  child: AnimatedTextKit(
-                    animatedTexts: [TypewriterAnimatedText('Flash Chat')],
-                  ),
-                )
-              ],
+                  Expanded(
+                    child: DefaultTextStyle(
+                      style: TextStyle(
+                        fontSize: 45.0,
+                        fontWeight: FontWeight.w900,
+                      ),
+                      child: AnimatedTextKit(
+                        animatedTexts: [TypewriterAnimatedText('Flash Chat')],
+                      ),
+                    ),
+                  )
+                ],
+              ),
             ),
             SizedBox(
               height: 48.0,

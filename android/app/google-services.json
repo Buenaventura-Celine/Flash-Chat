@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "44381574961",
+    "project_id": "flash-chat-33ff5",
+    "storage_bucket": "flash-chat-33ff5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:44381574961:android:efadc7ae92e0c61fc5c210",
+        "android_client_info": {
+          "package_name": "co.celinejoie.flash_chat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "44381574961-ssovo417pou630hgik2iqenha15n9dgq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6CCkOTRyWOmQqc84dvvH6F6TkX7iiURc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "44381574961-ssovo417pou630hgik2iqenha15n9dgq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
