@@ -48,13 +48,15 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                     height: 60.0,
                   ),
                 ),
-                TypewriterAnimatedTextKit(
-                  text: ['Flash Chat'],
-                  textStylestyle: TextStyle(
+                DefaultTextStyle(
+                  style: TextStyle(
                     fontSize: 45.0,
                     fontWeight: FontWeight.w900,
                   ),
-                ),
+                  child: AnimatedTextKit(
+                    animatedTexts: [TypewriterAnimatedText('Flash Chat')],
+                  ),
+                )
               ],
             ),
             SizedBox(
