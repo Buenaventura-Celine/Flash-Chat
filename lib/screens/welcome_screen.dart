@@ -50,22 +50,22 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                       height: 60.0,
                     ),
                   ),
-                  Expanded(
-                    child: DefaultTextStyle(
-                      style: TextStyle(
-                        fontSize: 45.0,
-                        fontWeight: FontWeight.w900,
-                      ),
-                      child: AnimatedTextKit(
-                        animatedTexts: [TypewriterAnimatedText('Flash Chat')],
+                  Center(
+                    child: Expanded(
+                      child: DefaultTextStyle(
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 45.0,
+                          fontWeight: FontWeight.w900,
+                        ),
+                        child: AnimatedTextKit(
+                          animatedTexts: [TypewriterAnimatedText('Flash Chat')],
+                        ),
                       ),
                     ),
                   )
                 ],
               ),
-            ),
-            SizedBox(
-              height: 48.0,
             ),
             RoundedButton(
               color: Colors.lightBlueAccent,
