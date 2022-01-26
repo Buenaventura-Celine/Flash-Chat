@@ -4,6 +4,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 final _firestore = FirebaseFirestore.instance;
+final _firestoreMessages =
+    _firestore.collection("messages").orderBy("createdAt");
 User loggedinUser;
 
 class ChatScreen extends StatefulWidget {
@@ -79,6 +81,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       _firestore.collection('messages').add({
                         'text': messageText,
                         'sender': loggedinUser.email,
+                        'createdAt': Timestamp.now(),
                       });
                     },
                     child: Text(
@@ -100,7 +103,7 @@ class MessageStream extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<QuerySnapshot>(
-      stream: _firestore.collection('messages').snapshots(),
+      stream: _firestoreMessages.snapshots(),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return Center(
@@ -120,7 +123,7 @@ class MessageStream extends StatelessWidget {
           final messageBubble = MessageBubble(
             sender: messageSender,
             text: messageText,
-            isMe: currentUser == loggedinUser,
+            isMe: currentUser == messageSender,
           );
           messageBubbles.add(messageBubble);
         }
